@@ -1,43 +1,35 @@
-import datetime  # importa o pacote datetime
+from fastapi import FastAPI
+app = FastAPI()
 
-print("hello world")
+@app.get("/")
+def hello():
+    return {"Hello": "World"}
 
-# obtem a data atual
-data = datetime.datetime.now()
-dia = 4
-print(data)
-print(type(dia)) # obtem o tipo da variavel
+# define o endpoint /horacerta que retorna a hora
+@app.get("/horacerta")
+def horacerta():
+    from datetime import datetime
+    d = datetime.now()
+    return f"{datetime.time(d)}"
 
-# exemplo de if
-if dia == 4:
-    print("Aula de Web")
-    print("Inicio 19h00")
-else:
-    print("Outra aula")
-
-# exemplo de função
-def get_time() -> str: 
-    d = datetime.datetime.now() # obtem a datetime atual
-    return f"{datetime.datetime.time(d)}"
-
-# chama a função
-time = get_time()
-print(time)
-
-# exemplo de lista
-lista = ["segunda", "terca", "quarta"]
-for d in lista:
-    print(d)
-
-# tamanho da lista
-print(len(lista))
-
-# exemplo de dicionário (objeto)
-pessoa = {
-    "nome": "Maria",
-    "cpf": "10101010101",
-    "idade": 33,
+# banco de dados...
+db = {
+    "br": { "name": "Brasil", "capital": "Brasilia" },
+    "ar": { "name": "Argentina", "capital": "Buenos Aires" }
 }
-print(pessoa)
-print(type(pessoa))
-print(pessoa['nome'])
+# http :8000/pais/br -b
+@app.get("/pais/{sigla}")
+def get_pais(sigla: str):
+    pais = db[sigla]
+    return pais
+
+# http :8000/frase -b
+@app.get("/frase")
+def get_quotes():
+    import requests
+    url = "https://zenquotes.io/api/today"
+    response = requests.get(url) # retornar apenas a chave "q"
+    return response.json()
+
+# uvicorn main:app --reload
+# uvicorn main:app --reload --port=5000

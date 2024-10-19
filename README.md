@@ -1,5 +1,47 @@
+# Criação do ambiente virtual Python
+## cria a pasta env (somente uma vez)
+```bash
+python3 -m venv env
+```
+
+## Ativar o ambiente
+Ativa o ambiente para usar no projeto.
+
+```bash
+source env/bin/activate
+```
+
+## Instalar biblioteca requests
+```bash
+pip install requests
+```
+
+# Servidor Web (FastAPI)
+
+Instalar o fastapi e o servidor uvicorn
+
+```bash
+pip install "fastapi[standard]" uvicorn
+```
+
+## Inicia o servidor 
+```bash
+uvicorn main:app --reload
+uvicorn main:app --reload --port=5000 # opcional se a port 8000 estiver em uso
+```
+
+## Verificar todos os endpoints
+- http://127.0.0.1:8000/docs
+
+
+---
+---
+
+
 # Desenvolvimento Web IV
 - https://github.com/fscheidt/web4
+
+
 
 ## Sobre a disciplina
 - JSON (serialização de dados)
