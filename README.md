@@ -40,7 +40,7 @@ uvicorn main:app --reload --port=5000 # opcional se a port 8000 estiver em uso
 
 # Desenvolvimento Web IV
 - https://github.com/fscheidt/web4
-
+- https://ava.ifpr.edu.br/course/view.php?id=12869
 
 
 ## Sobre a disciplina
