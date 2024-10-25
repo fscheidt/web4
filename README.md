@@ -1,3 +1,9 @@
+# API TMDB
+- Cadastro no site para gerar a chave da API:
+- https://www.themoviedb.org/settings/api
+- chave: 93653de2643f551a1edd3977d0bbc1f1
+
+
 # Criação do ambiente virtual Python
 ## cria a pasta env (somente uma vez)
 ```bash
