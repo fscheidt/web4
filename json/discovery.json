@@ -1,0 +1,408 @@
+{
+    "page": 1,
+    "results": [
+      {
+        "adult": false,
+        "backdrop_path": "/417tYZ4XUyJrtyZXj7HpvWf1E8f.jpg",
+        "genre_ids": [
+          16,
+          878,
+          10751
+        ],
+        "id": 1184918,
+        "original_language": "en",
+        "original_title": "The Wild Robot",
+        "overview": "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
+        "popularity": 4950.682,
+        "poster_path": "/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
+        "release_date": "2024-09-12",
+        "title": "The Wild Robot",
+        "video": false,
+        "vote_average": 8.6,
+        "vote_count": 1470
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/3V4kLQg0kSqPLctI5ziYWabAZYF.jpg",
+        "genre_ids": [
+          28,
+          878,
+          12
+        ],
+        "id": 912649,
+        "original_language": "en",
+        "original_title": "Venom: The Last Dance",
+        "overview": "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance.",
+        "popularity": 2994.212,
+        "poster_path": "/k42Owka8v91trK1qMYwCQCNwJKr.jpg",
+        "release_date": "2024-10-22",
+        "title": "Venom: The Last Dance",
+        "video": false,
+        "vote_average": 6.6,
+        "vote_count": 90
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/9SSEUrSqhljBMzRe4aBTh17rUaC.jpg",
+        "genre_ids": [
+          878,
+          27
+        ],
+        "id": 945961,
+        "original_language": "en",
+        "original_title": "Alien: Romulus",
+        "overview": "While scavenging the deep ends of a derelict space station, a group of young space colonizers come face to face with the most terrifying life form in the universe.",
+        "popularity": 2982.392,
+        "poster_path": "/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg",
+        "release_date": "2024-08-13",
+        "title": "Alien: Romulus",
+        "video": false,
+        "vote_average": 7.267,
+        "vote_count": 1861
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/7h6TqPB3ESmjuVbxCxAeB1c9OB1.jpg",
+        "genre_ids": [
+          27,
+          18,
+          878
+        ],
+        "id": 933260,
+        "original_language": "en",
+        "original_title": "The Substance",
+        "overview": "A fading celebrity decides to use a black market drug, a cell-replicating substance that temporarily creates a younger, better version of herself.",
+        "popularity": 2641.055,
+        "poster_path": "/zQc1PITqFxZDbEmHlQgO5Mxc4Od.jpg",
+        "release_date": "2024-09-07",
+        "title": "The Substance",
+        "video": false,
+        "vote_average": 7.3,
+        "vote_count": 869
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg",
+        "genre_ids": [
+          28,
+          35,
+          878
+        ],
+        "id": 533535,
+        "original_language": "en",
+        "original_title": "Deadpool & Wolverine",
+        "overview": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.",
+        "popularity": 1975.796,
+        "poster_path": "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+        "release_date": "2024-07-24",
+        "title": "Deadpool & Wolverine",
+        "video": false,
+        "vote_average": 7.713,
+        "vote_count": 4785
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/eQEgKIRF7KeVGBQ8IYcklpU8RPf.jpg",
+        "genre_ids": [
+          27,
+          53
+        ],
+        "id": 1034541,
+        "original_language": "en",
+        "original_title": "Terrifier 3",
+        "overview": "Five years after surviving Art the Clown's Halloween massacre, Sienna and Jonathan are still struggling to rebuild their shattered lives. As the holiday season approaches, they try to embrace the Christmas spirit and leave the horrors of the past behind. But just when they think they're safe, Art returns, determined to turn their holiday cheer into a new nightmare. The festive season quickly unravels as Art unleashes his twisted brand of terror, proving that no holiday is safe.",
+        "popularity": 1760.315,
+        "poster_path": "/63xYQj1BwRFielxsBDXvHIJyXVm.jpg",
+        "release_date": "2024-10-09",
+        "title": "Terrifier 3",
+        "video": false,
+        "vote_average": 7.3,
+        "vote_count": 149
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/p5ozvmdgsmbWe0H8Xk7Rc8SCwAB.jpg",
+        "genre_ids": [
+          16,
+          10751,
+          12,
+          35,
+          18
+        ],
+        "id": 1022789,
+        "original_language": "en",
+        "original_title": "Inside Out 2",
+        "overview": "Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not alone.",
+        "popularity": 1227.571,
+        "poster_path": "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
+        "release_date": "2024-06-11",
+        "title": "Inside Out 2",
+        "video": false,
+        "vote_average": 7.613,
+        "vote_count": 4462
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/oPUOpnl3pqD8wuidjfUn17mO1yA.jpg",
+        "genre_ids": [
+          16,
+          878,
+          12,
+          10751,
+          28
+        ],
+        "id": 698687,
+        "original_language": "en",
+        "original_title": "Transformers One",
+        "overview": "The untold origin story of Optimus Prime and Megatron, better known as sworn enemies, but once were friends bonded like brothers who changed the fate of Cybertron forever.",
+        "popularity": 1204.038,
+        "poster_path": "/iRCgqpdVE4wyLQvGYU3ZP7pAtUc.jpg",
+        "release_date": "2024-09-11",
+        "title": "Transformers One",
+        "video": false,
+        "vote_average": 8,
+        "vote_count": 299
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/4KHEK6AQFHhv4TDtL3KLReePB05.jpg",
+        "genre_ids": [
+          28,
+          27,
+          53
+        ],
+        "id": 1029235,
+        "original_language": "en",
+        "original_title": "Azrael",
+        "overview": "In a world where no one speaks, a devout female hunts down a young woman who has escaped her imprisonment. Recaptured by its ruthless leaders, Azrael is due to be sacrificed to pacify an ancient evil deep within the surrounding wilderness.",
+        "popularity": 1151.735,
+        "poster_path": "/qpdFKDvJS7oLKTcBLXOaMwUESbs.jpg",
+        "release_date": "2024-09-27",
+        "title": "Azrael",
+        "video": false,
+        "vote_average": 6.078,
+        "vote_count": 90
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/xi1VSt3DtkevUmzCx2mNlCoDe74.jpg",
+        "genre_ids": [
+          35,
+          14,
+          27
+        ],
+        "id": 917496,
+        "original_language": "en",
+        "original_title": "Beetlejuice Beetlejuice",
+        "overview": "After a family tragedy, three generations of the Deetz family return home to Winter River. Still haunted by Betelgeuse, Lydia's life is turned upside down when her teenage daughter, Astrid, accidentally opens the portal to the Afterlife.",
+        "popularity": 1031.464,
+        "poster_path": "/kKgQzkUCnQmeTPkyIwHly2t6ZFI.jpg",
+        "release_date": "2024-09-04",
+        "title": "Beetlejuice Beetlejuice",
+        "video": false,
+        "vote_average": 7.208,
+        "vote_count": 1524
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/lgkPzcOSnTvjeMnuFzozRO5HHw1.jpg",
+        "genre_ids": [
+          16,
+          10751,
+          35,
+          28
+        ],
+        "id": 519182,
+        "original_language": "en",
+        "original_title": "Despicable Me 4",
+        "overview": "Gru and Lucy and their girls—Margo, Edith and Agnes—welcome a new member to the Gru family, Gru Jr., who is intent on tormenting his dad. Gru also faces a new nemesis in Maxime Le Mal and his femme fatale girlfriend Valentina, forcing the family to go on the run.",
+        "popularity": 1014.768,
+        "poster_path": "/wWba3TaojhK7NdycRhoQpsG0FaH.jpg",
+        "release_date": "2024-06-20",
+        "title": "Despicable Me 4",
+        "video": false,
+        "vote_average": 7.1,
+        "vote_count": 2049
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/3m0j3hCS8kMAaP9El6Vy5Lqnyft.jpg",
+        "genre_ids": [
+          878,
+          53,
+          27,
+          18
+        ],
+        "id": 1125510,
+        "original_language": "es",
+        "original_title": "El hoyo 2",
+        "overview": "After a mysterious leader imposes his law in a brutal system of vertical cells, a new arrival battles against a dubious food distribution method.",
+        "popularity": 1012.359,
+        "poster_path": "/z2m3g8QOEMNyslgBU5vsyzRwgSz.jpg",
+        "release_date": "2024-09-27",
+        "title": "The Platform 2",
+        "video": false,
+        "vote_average": 5.7,
+        "vote_count": 701
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/hd1TvTUGjkoYoqvXYfSBpI5Ri9B.jpg",
+        "genre_ids": [
+          16,
+          28,
+          12,
+          878
+        ],
+        "id": 1159311,
+        "original_language": "ja",
+        "original_title": "僕のヒーローアカデミア THE MOVIE ユアネクスト",
+        "overview": "In a society devastated by the effects of an all-out war between heroes and villains, a mysterious giant fortress suddenly appears, engulfing towns and people one after another. Then, a man reminiscent of All Might, the 'symbol of peace', stands in front of Izuku and his friends...",
+        "popularity": 899.321,
+        "poster_path": "/8rdB1wkheEMMqcY8qLAKjCMPcnZ.jpg",
+        "release_date": "2024-08-02",
+        "title": "My Hero Academia: You're Next",
+        "video": false,
+        "vote_average": 7.1,
+        "vote_count": 26
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/g1z1ZvYKcmk9EnVOTYXR6vkNjkZ.jpg",
+        "genre_ids": [
+          14,
+          27,
+          28
+        ],
+        "id": 1087822,
+        "original_language": "en",
+        "original_title": "Hellboy: The Crooked Man",
+        "overview": "Hellboy and a rookie BPRD agent get stranded in 1950s rural Appalachia. There, they discover a small community haunted by witches, led by a local devil with a troubling connection to Hellboy's past: the Crooked Man.",
+        "popularity": 807.058,
+        "poster_path": "/iz2GabtToVB05gLTVSH7ZvFtsMM.jpg",
+        "release_date": "2024-08-29",
+        "title": "Hellboy: The Crooked Man",
+        "video": false,
+        "vote_average": 5.24,
+        "vote_count": 167
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/of1tQasFGCeHgWPmSgdA1WS6hNW.jpg",
+        "genre_ids": [
+          80,
+          53,
+          28
+        ],
+        "id": 1047373,
+        "original_language": "en",
+        "original_title": "The Silent Hour",
+        "overview": "While working a case as an interpreter, a hearing-impaired police detective must confront a group of criminals trying to eliminate a deaf murder witness in her apartment building.",
+        "popularity": 756.861,
+        "poster_path": "/j736cRzBtEPCm0nHnpRN1prqiqj.jpg",
+        "release_date": "2024-10-03",
+        "title": "The Silent Hour",
+        "video": false,
+        "vote_average": 6.426,
+        "vote_count": 34
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/cVg97LOJgrDZJ7bVmjU2KsGRYnU.jpg",
+        "genre_ids": [
+          27,
+          9648
+        ],
+        "id": 1100782,
+        "original_language": "en",
+        "original_title": "Smile 2",
+        "overview": "About to embark on a new world tour, global pop sensation Skye Riley begins experiencing increasingly terrifying and inexplicable events. Overwhelmed by the escalating horrors and the pressures of fame, Skye is forced to face her dark past to regain control of her life before it spirals out of control.",
+        "popularity": 687.774,
+        "poster_path": "/aE85MnPIsSoSs3978Noo16BRsKN.jpg",
+        "release_date": "2024-10-16",
+        "title": "Smile 2",
+        "video": false,
+        "vote_average": 6.897,
+        "vote_count": 155
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg",
+        "genre_ids": [
+          878,
+          28
+        ],
+        "id": 335983,
+        "original_language": "en",
+        "original_title": "Venom",
+        "overview": "Investigative journalist Eddie Brock attempts a comeback following a scandal, but accidentally becomes the host of Venom, a violent, super powerful alien symbiote. Soon, he must rely on his newfound powers to protect the world from a shadowy organization looking for a symbiote of their own.",
+        "popularity": 670.183,
+        "poster_path": "/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+        "release_date": "2018-09-28",
+        "title": "Venom",
+        "video": false,
+        "vote_average": 6.829,
+        "vote_count": 15751
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/9msuazXGWAyl7vhxVFU7e7Bb5Ik.jpg",
+        "genre_ids": [
+          18,
+          10749
+        ],
+        "id": 179387,
+        "original_language": "tl",
+        "original_title": "Heavenly Touch",
+        "overview": "Jonard is having trouble making ends meet. His mother is suffering from depression, and he and his sister are forced to quit school in order to take care of her. One day, Jonard meets up his friend Rodel, and Rodel introduces him to the world of massage parlors. Rodel teaches him massage, and brings him to Heavenly Touch, a syndicate-run massage parlor that mostly caters to homosexuals.",
+        "popularity": 666.707,
+        "poster_path": "/ory8WuAqznTE7lfopTSymHpop2t.jpg",
+        "release_date": "2009-05-12",
+        "title": "Heavenly Touch",
+        "video": false,
+        "vote_average": 6,
+        "vote_count": 19
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/p4INKu77iuTG1o1a5N3Y9vqeEGq.jpg",
+        "genre_ids": [
+          27,
+          53
+        ],
+        "id": 1079485,
+        "original_language": "en",
+        "original_title": "Winnie-the-Pooh: Blood and Honey 2",
+        "overview": "Five months following the murders, Christopher Robin struggles to maintain a regular life while dealing with PTSD. However, deep within the 100-Acre-Wood, a destructive rage grows as Pooh, Piglet, Owl, and Tigger find their home and their lives endangered after their existence is revealed.",
+        "popularity": 662,
+        "poster_path": "/2sADrLwMQof6yYmrJRSa04tFZuS.jpg",
+        "release_date": "2024-03-26",
+        "title": "Winnie-the-Pooh: Blood and Honey 2",
+        "video": false,
+        "vote_average": 6.2,
+        "vote_count": 247
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/l0Y9OzRWKmlzZcGy4olKaOPXsru.jpg",
+        "genre_ids": [
+          10749,
+          14,
+          16
+        ],
+        "id": 3933,
+        "original_language": "en",
+        "original_title": "Corpse Bride",
+        "overview": "Set in a 19th-century European village, this stop-motion animation feature follows the story of Victor, a young man whisked away to the underworld and wed to a mysterious corpse bride, while his real bride Victoria waits bereft in the land of the living.",
+        "popularity": 649.628,
+        "poster_path": "/isb2Qow76GpqYmsSyfdMfsYAjts.jpg",
+        "release_date": "2005-09-12",
+        "title": "Corpse Bride",
+        "video": false,
+        "vote_average": 7.573,
+        "vote_count": 9117
+      }
+    ],
+    "total_pages": 46739,
+    "total_results": 934769
+  }
