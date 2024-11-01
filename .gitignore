@@ -1,3 +1,6 @@
 *.swp
 __pycache__/
+# pasta do ambiente virtual
 env
+# arquivo com as credenciais/senhas
+.env
