@@ -4,11 +4,13 @@ que não está rastreado pelo controle de versão ou seja compartilhado.
 
 ## Instalar biblioteca dotenv
 Permite a leitura do arquivo .env de configuração
-```
+
+```bash
 pip install python-dotenv
 ```
 
 ## Importar token do ambiente 
+
 ```python
 import os
 import dotenv

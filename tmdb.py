@@ -18,6 +18,10 @@ def get_json(url: str) -> dict:
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return { "status": "up and running" }
+
 @app.get("/movies") # http :8000/movies
 def get_movies():
     url = "https://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc&primary_release_year=2010"
@@ -48,11 +52,11 @@ def get_genres():  # (3)
 def get_artista(nome: str):
     """ 
     Procura um artista pelo nome. Retornar os seguintes campos:
-        "gender"
-        "id"
-        "name"
-        "popularity"
-        "profile_path"
+    "id"
+    "name"
+    "gender"
+    "popularity"
+    "profile_path"
     
     https://api.themoviedb.org/3/search/person
     """
@@ -63,9 +67,22 @@ def get_artista(nome: str):
     return person
 
 def get_movie(title: str): # (2)
-    """ procura um filme pelo titulo """
+    """ 
+    Procura um filme pelo titulo. Retorna os seguintes campos:
+    "id"
+    "title"
+    "genres"
+    "original_language"
+    "overview"
+    "popularity"
+    "poster_path"
+    "release_date"
+    "vote_count"
+    """
     ...
 
 def get_elenco(title: str): # (4)
-    """ retorna o nome de todos os artistas de um filme """
+    """ 
+    Lista dos artistas que participaram em um filme 
+    """
     ...
