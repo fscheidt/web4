@@ -81,8 +81,9 @@ def get_movie(title: str): # (2)
     """
     ...
 
-def get_elenco(title: str): # (4)
+def get_elenco(movie_id: int): # (4)
     """ 
-    Lista dos artistas que participaram em um filme 
+    Lista dos artistas que participaram no filme.
+    Retorna id e nome para cada artista
     """
     ...
