@@ -1,3 +1,26 @@
+# Modelo de dados
+
+## pydantic
+
+```bash
+pip install pydantic
+```
+
+
+## Congelar o ambiente virtual
+
+Gera um arquivo contendo todas as dependências do projeto:
+```bash
+source env/bin/activate
+pip freeze > requirements.txt
+```
+
+Restaura o ambiente virtual
+```bash
+python3 -m venv env
+pip install -r requirements.txt
+```
+
 # Credenciais
 Credenciais devem ser armazenadas em um arquivo de configuração,
 que não está rastreado pelo controle de versão ou seja compartilhado.
