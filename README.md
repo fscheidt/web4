@@ -1,7 +1,9 @@
 # Modelo de dados
 
-## pydantic
+Pydantic é uma biblioteca que facilita a serialização e deserialização de objetos em json e vice-versa. Além disso, pode-se usar o esquema de validação do pydantic para verificar se o json retornado possui os valores obrigatórios.
 
+## pydantic
+Instalação:
 ```bash
 pip install pydantic
 ```

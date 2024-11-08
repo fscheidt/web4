@@ -5,12 +5,12 @@ from pycine.models import Movie
 dotenv.load_dotenv(".env") 
 token = os.environ["API_TOKEN"] 
 
-def get_json(url: str) -> dict:
+def get_json(url: str, params: dict = None) -> dict:
     headers = {
         "accept": "application/json",
         "Authorization": f"Bearer {token}"
     }
-    data = requests.get(url, headers=headers)
+    data = requests.get(url, headers=headers, params=params)
     return data.json()
 
 def get_movie(id: int):
