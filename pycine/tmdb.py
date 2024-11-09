@@ -14,9 +14,6 @@ def get_json(url: str, params: dict = None) -> dict:
     data = requests.get(url, headers=headers, params=params)
     return data.json()
 
-# url = "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc"
-
-
 def get_movie(id: int):
     """ Obtem o filme pelo ID """
     url = f"https://api.themoviedb.org/3/movie/{id}?language=en-US"
@@ -24,11 +21,16 @@ def get_movie(id: int):
     movie = Movie.model_validate(data)
     return movie
 
+def top_movies():
+    """
+    https://api.themoviedb.org/3/movie/top_rated
+    """
+    ...
 
-def search_movies():
+def search_movies(params: dict = None):
     """ Busca filmes usando filtros """
     url = "https://api.themoviedb.org/3/discover/movie"
-    params = {
+    params = params or {
         "include_adult": False, 
         "include_video": False,
         "language": "en-US", 

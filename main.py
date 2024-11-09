@@ -12,4 +12,9 @@ def get_movie(id: int):
 
 @app.get("/search/movies")
 def search_movies():
-    return tmdb.search_movies()
+    params = {
+        "sort_by": "vote_count.desc"
+    }
+    # results = tmdb.search_movies() # shawshaw
+    results = tmdb.search_movies(params) # inception
+    return results

@@ -18,3 +18,18 @@ class MovieResults(BaseModel):
     results: list[Movie]
     total_pages: int
     total_results: int
+
+class Person(BaseModel):
+    """ atributos para mapear do json:
+    id
+    name
+    biography
+    birthday
+    deathday
+    gender
+    known_for_department
+    place_of_birth
+    popularity
+    profile_path
+    """
+    ...
