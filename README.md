@@ -34,6 +34,14 @@ Permite a leitura do arquivo .env de configuração
 pip install python-dotenv
 ```
 
+
+## Arquivo `.env` 
+Na pasta raiz do projeto, criar um arquivo chamado `.env` com o conteúdo:
+
+```
+API_TOKEN = "COLOCAR_AQUI_O_TOKEN_DO_TMDB"
+```
+
 ## Importar token do ambiente 
 
 ```python
