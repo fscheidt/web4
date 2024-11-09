@@ -11,3 +11,10 @@ class Movie(BaseModel):
     poster_path: Optional[str] = None
     release_date: str
     vote_count: Optional[int] = None
+
+class MovieResults(BaseModel):
+    """ usar quando o endpoint retorna uma lista de filmes """
+    page: int
+    results: list[Movie]
+    total_pages: int
+    total_results: int
