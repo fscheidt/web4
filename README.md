@@ -1,15 +1,70 @@
 # Inicialização do back e front
 
-backend:
-```
+## Run
+Para iniciar os serviços do back e front, executar os comandos abaixo para iniciar cada aplicação. 
+
+backend (fastapi):
+```bash
 cd web4
 uvicorn main:app --reload
 ```
 
-frontend:
-```
+frontend (svelte):
+```bash
 cd web4/front
 npm run dev -- --open
+```
+
+## Install
+
+**Atenção**: se você fez git clone ou download desse projeto, o ambiente virtual precisa ser gerado na sua máquina. Executar os comandos abaixo para criar cada ambiente:
+
+(1) Abrir o terminal, usar o git para baixar uma cópia desse projeto:
+
+```bash
+git clone https://github.com/fscheidt/web4
+```
+
+(2) Gerar ambiente virtual do **backend (python):**
+
+```bash
+cd web4
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+```
+
+Resultado: a pasta `env` é criada no projeto:
+
+```
+├── /env            <--
+├── /front
+├── /json
+├── /pycine
+├── main.py
+├── README.md
+└── requirements.txt
+```
+
+(3) Instalar dependências do **frontend (nodejs):**
+
+```bash
+cd front
+npm install
+```
+
+Resultado: a pasta `node_modules` e `.svelte-kit` são geradas:
+
+```
+├── /env
+├── /front
+│   ├── /node_modules        <--
+│   ├── /.svelte-kit         <--
+├── /json
+├── /pycine
+├── main.py
+├── README.md
+└── requirements.txt
 ```
 
 # Modelo de dados
@@ -17,7 +72,9 @@ npm run dev -- --open
 Pydantic é uma biblioteca que facilita a serialização e deserialização de objetos em json e vice-versa. Além disso, pode-se usar o esquema de validação do pydantic para verificar se o json retornado possui os valores obrigatórios.
 
 ## pydantic
+
 Instalação:
+
 ```bash
 pip install pydantic
 ```
@@ -26,6 +83,7 @@ pip install pydantic
 ## Congelar o ambiente virtual
 
 Gera um arquivo contendo todas as dependências do projeto:
+
 ```bash
 source env/bin/activate
 pip freeze > requirements.txt
