@@ -1,3 +1,17 @@
+# Inicialização do back e front
+
+backend:
+```
+cd web4
+uvicorn main:app --reload
+```
+
+frontend:
+```
+cd web4/front
+npm run dev -- --open
+```
+
 # Modelo de dados
 
 Pydantic é uma biblioteca que facilita a serialização e deserialização de objetos em json e vice-versa. Além disso, pode-se usar o esquema de validação do pydantic para verificar se o json retornado possui os valores obrigatórios.
