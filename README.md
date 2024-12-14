@@ -28,10 +28,7 @@ ou arquivo que contém objeto `app` (fastapi)
 
 ### imports
 ```python
-from fastapi import FastAPI, Body, HTTPException, status
 from fastapi.responses import Response
-from pydantic import ConfigDict, BaseModel, Field
-from pydantic.functional_validators import BeforeValidator
 from typing_extensions import Annotated
 from bson import ObjectId
 import motor.motor_asyncio
@@ -49,10 +46,7 @@ db_url = os.environ["MONGODB_URL"]
 ```python
 client = motor.motor_asyncio.AsyncIOMotorClient(db_url)
 db = client.pycine
-movies_collection = db.get_collection("movies")
 # representa id gerado no atlas
-PyObjectId = Annotated[str, BeforeValidator(str)]
-
 ```
 
 ## Atualizar a model Movie
@@ -90,17 +84,20 @@ Routes (`main.py`)
     response_model_by_alias=False,
 )
 async def list_movies():
+    movies_collection = db.get_collection("movies")
     return MovieCollection(movies=await movies_collection.find().to_list(20))
 
 ```
 
 ### SVELTE
 
-#### Find movie
+#### Find
+
+`MovieDB.svelte`
 
 ```javascript
-async function getMovie() {
-    const endpoint = `http://localhost:8000/save/${id}`;
+async function getMovies() {
+    const endpoint = `http://localhost:8000/find`;
     const response = await fetch(endpoint);
     const data = response.json();
     if (response.ok) {
