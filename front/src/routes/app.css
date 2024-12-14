@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --zoom-level: 1;
+  --base-font: "Albert Sans";
+  --mono-font: "Fira Mono";
+}
+html {
+  --bg-1: #fff;
+  --bg-2: #e0e6eb;
+  --bg-3: #c2cdd6;
+  --fg-1: #212121;
+  --fg-2: #4d4d4d;
+  --link: #1c7ed4;
+  --link-hover: #3492e5;
+  --link-active: #176bb5;
+}
+html.dark {
+  --bg-1: #2e2e2e;
+  --bg-2: #4d4d4d;
+  --bg-3: #666;
+  --fg-1: #e6e6e6;
+  --fg-2: #b3b3b3;
+  --fg-3: #999;
+  --link: #73c1fc;
+  --link-hover: #91cefd;
+  --link-active: #4baffb;
+}
+body {
+  font-family: var(--base-font);
+  zoom: var(--zoom-level);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content {
+  flex: 1;
+  padding: 1rem;
+}
+.footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 1em 0;
+}
+a {
+  color: var(--link);
+  border-bottom: 1px dotted rgba(0, 0, 139, 0.768);
+  text-decoration: none;
+}
+a:hover {
+  background-color: #cbe0f2;
+  color: var(--link-hover);
+}
+a:active {
+  color: var(--link-active);
+}
+nav {
+  background: var(--bg-2);
+  border-radius: var(--border-radius);
+  z-index: 2;
+  gap: 1em;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+nav a[aria-current="true"] {
+  border-bottom: 2px solid;
+}
+.error {
+  color: red;
+}
+pre{
+    font-family: var(--mono-font);
+}
