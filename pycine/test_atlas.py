@@ -15,12 +15,16 @@ movie = {
     'id': 218,
     'title': 'Terminator',
     'genres': ['Action', 'Sci-fi'],
-    'original_language': 'en-US'
+    'original_language': 'en-US',
+    'overview': 'info do filme',
+    'release_date': '1991-10-10'
 }
 # 1 define a base de dados
 db = client.get_database('pycine')
 # 2 obtem a collection (tabela) movies
 movies_collection = db.get_collection('movies')
+# remove todos filmes com id 218
+movies_collection.delete_many({'id': 218})
 # CRUD
 # CREATE 
 # equivalente ao sql INSERT INTO ...

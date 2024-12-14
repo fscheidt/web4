@@ -8,6 +8,27 @@ from fastapi.middleware.cors import CORSMiddleware
 source env/bin/activate
 uvicorn main:app --reload
 """
+from fastapi import Body, HTTPException, status
+from fastapi.responses import Response
+from pydantic import ConfigDict, BaseModel, Field
+from pydantic.functional_validators import BeforeValidator
+from typing_extensions import Annotated
+from bson import ObjectId
+import motor.motor_asyncio
+from pymongo import ReturnDocument
+import dotenv
+import os
+dotenv.load_dotenv(".env") 
+db_url = os.environ["MONGODB_URL"] 
+
+
+client = motor.motor_asyncio.AsyncIOMotorClient(db_url)
+db = client.pycine  # banco de dados
+# movies_collection = db.get_collection("movies")
+# representa id gerado no atlas
+PyObjectId = Annotated[str, BeforeValidator(str)]
+
+
 
 origins = [
    "http://localhost",
@@ -25,6 +46,20 @@ app.add_middleware(
 @app.get("/")
 def hello():
     return {"status": "pycine is running"}
+
+from pycine import models
+
+@app.get(
+   "/find/",
+    response_description="List all movies",
+    response_model=models.MovieCollection,
+    response_model_by_alias=False,
+)
+async def list_movies():
+    movies_collection = db.get_collection("movies")
+    return models.MovieCollection(movies=await movies_collection.find().to_list(20))
+
+
 
 @app.get("/movie/{id}")
 def get_movie(id: int):
