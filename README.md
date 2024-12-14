@@ -1,3 +1,168 @@
+# Persistencia de dados
+
+## Atlas cloud
+
+## Dependências python
+
+```bash
+# ativar o env
+source env/bin/activate
+
+# driver do mongodb para python
+pip install pymongo
+
+# habilita acesso assincrono ao pymongo (para o fastapi)
+pip install motor
+```
+
+## Fastapi
+
+```python
+# adicionar no arquivo .env
+MONGODB_URL="mongodb+srv://USERNAME:PASSWORD@cluster0.a00ka.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+```
+
+### main.py
+
+ou arquivo que contém objeto `app` (fastapi)
+
+### imports
+```python
+from fastapi import FastAPI, Body, HTTPException, status
+from fastapi.responses import Response
+from pydantic import ConfigDict, BaseModel, Field
+from pydantic.functional_validators import BeforeValidator
+from typing_extensions import Annotated
+from bson import ObjectId
+import motor.motor_asyncio
+from pymongo import ReturnDocument
+
+import dotenv
+import os
+dotenv.load_dotenv(".env") 
+db_url = os.environ["MONGODB_URL"] 
+
+```
+
+### conexão com o database
+
+```python
+client = motor.motor_asyncio.AsyncIOMotorClient(db_url)
+db = client.pycine
+movies_collection = db.get_collection("movies")
+# representa id gerado no atlas
+PyObjectId = Annotated[str, BeforeValidator(str)]
+
+```
+
+## Atualizar a model Movie
+
+Arquivo `models.py`
+
+```python
+class Movie(BaseModel):
+    # (id) é um alias para (_id) para manter o estado do objeto sincronizado com o database
+    # No entento (id) no python por convenção
+    id: Optional[PyObjectId] = Field(alias="_id", default=None)
+    # demais atributos ...
+    model_config = ConfigDict(
+        populate_by_name=True,
+        arbitrary_types_allowed=True,
+        json_encoders={ObjectId: str},
+    )
+
+# Classe para armazenar o resultado do find()
+class MovieCollection(BaseModel):
+    movies: List[Movie]
+
+```
+
+
+## Find
+
+Routes (`main.py`)
+
+```python
+@app.get(
+   "/find/",
+    response_description="List all movies",
+    response_model=MovieCollection,
+    response_model_by_alias=False,
+)
+async def list_movies():
+    return MovieCollection(movies=await movies_collection.find().to_list(20))
+
+```
+
+### SVELTE
+
+#### Find movie
+
+```javascript
+async function getMovie() {
+    const endpoint = `http://localhost:8000/save/${id}`;
+    const response = await fetch(endpoint);
+    const data = response.json();
+    if (response.ok) {
+        return data;
+    } else {throw new Error(data); }
+  }
+```
+
+
+## Create (save)
+
+Routes (`main.py`)
+
+```python
+@app.post(
+    "/save/",
+    response_description="Save Movie in collection.movies",
+    response_model=Movie,
+    status_code=status.HTTP_201_CREATED,
+    response_model_by_alias=False,
+)
+async def create_movie(movie: Movie = Body(...)):
+    new_movie = await movies_collection.insert_one(
+        movie.model_dump(by_alias=True, exclude=["id"])
+    )
+    created_movie = await movies_collection.find_one(
+        {"_id": new_movie.inserted_id}
+    )
+    return created_movie
+
+```
+
+### SVELTE
+
+#### Create movie 
+
+```javascript
+async function save() {
+    const movieData = {
+        // get fields
+    }
+    const endpoint = `http://localhost:8000/save`;
+    const settings = {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(movieData)
+    };
+    const res = await fetch(endpoint, settings);
+    const data = res.json();
+    if (res.ok) {
+        console.log(data);
+        return data;
+    } else {throw new Error(data); }
+}
+```
+
+---
+
+
 # Inicialização do back e front
 
 ## Run
