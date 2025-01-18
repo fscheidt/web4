@@ -1,3 +1,57 @@
+# Favoritar filme
+
+```js
+async function setFav(movieId) {
+    let endpoint = `http://localhost:8000/fav/movie/${movieId}`;
+    const settings = {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        }
+    };
+    const res = await fetch(endpoint, settings);
+    const data = res.json();
+    if (res.ok) {
+        console.log(data);
+        return data;
+    } else {throw new Error(data); }
+}
+```
+
+```python
+
+@app.post("/fav/movie/{movie_id}")
+def save_movie(movie_id: int): 
+    print(f"request to save movie [{movie_id}]")
+    # save in cloud atlas ...
+    return {"movie_id": movie_id}
+
+```
+
+
+## Svelte rotas
+<pre>
+  Criação das rotas no sveltekit:
+
+  /front/src/routes/movies/+page.svelte
+  http://localhost:5173/movies
+
+
+  /front/src/routes/person/+page.svelte
+  http://localhost:5173/person
+
+</pre>
+
+
+## Aulas
+17/01/25 - Revisão e caso de uso favoritar filme
+24/01/25
+31/01/25 - Apresentar favoritar artista (atividade 4)
+07/02/25 - Apresentar favoritar artista
+
+
+
 # Persistencia de dados
 
 ## Atlas cloud
