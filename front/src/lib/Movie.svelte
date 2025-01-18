@@ -32,6 +32,8 @@ onMount(() => {
         <div>
             <h2>{ movie.title }</h2>
             <p>{ movie.release_date}</p>
+            <p>{ movie._id}</p>
+            
         </div>
         {/each}
     </div>
