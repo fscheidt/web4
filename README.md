@@ -1,3 +1,11 @@
+# Próximas Aulas
+
+<pre>
+24/01 - Implementação favoritar filme e artista
+31/01 - Apresentação favoritar artista (atividade 4)
+07/02 - Apresentação favoritar artista
+</pre>
+
 # Favoritar filme
 
 ```js
@@ -42,14 +50,6 @@ def save_movie(movie_id: int):
   http://localhost:5173/person
 
 </pre>
-
-
-## Aulas
-17/01/25 - Revisão e caso de uso favoritar filme
-24/01/25
-31/01/25 - Apresentar favoritar artista (atividade 4)
-07/02/25 - Apresentar favoritar artista
-
 
 
 # Persistencia de dados
