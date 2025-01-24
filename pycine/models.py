@@ -19,6 +19,7 @@ class Movie(BaseModel):
     poster_path: Optional[str] = None
     release_date: str
     vote_count: Optional[int] = None
+    is_fav: Optional[bool] = False
     model_config = ConfigDict(
         populate_by_name=True,
         arbitrary_types_allowed=True,

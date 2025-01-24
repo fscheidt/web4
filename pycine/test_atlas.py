@@ -3,6 +3,7 @@ import os
 from pprint import pprint
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+from models import Movie
 
 dotenv.load_dotenv(".env") 
 db_url = os.environ["MONGODB_URL"] 
@@ -25,6 +26,7 @@ new_movie = {
     { "id": 53, "name": "Thriller" },
     { "id": 878,"name": "Science Fiction"}
   ],
+  "is_fav": True,
   "original_language": "en",
   "overview": "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassin known as the \"Terminator\" back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgents against 21st century mechanical hegemony. Meanwhile, the human-resistance movement dispatches a lone warrior to safeguard Sarah. Can he stop the virtually indestructible killing machine?",
   "popularity": 74.305,
@@ -42,17 +44,26 @@ movies_collection = db.get_collection('movies')
 # CRUD
 ########
 
+# DELETE ALL - faz drop de toda a tabela:
+movies_collection.drop()
+
 # DELETE - remove todos filmes com id 218
-res = movies_collection.delete_many({'id': 218})
-print(f"total deleted: {res.deleted_count}")
+# res = movies_collection.delete_many({'id': 218})
+# print(f"total deleted: {res.deleted_count}")
 
 print("="*40)
 
 # CREATE 
 # equivalente ao sql INSERT INTO ...
-res = movies_collection.insert_one(new_movie)
-print(f"{res.inserted_id}") # verifica o id gerado pelo banco
-
+# res = movies_collection.insert_one(new_movie)
+print("saving movie")
+# gera um objeto movie a partir de um dicionario python
+movie = Movie.model_validate(new_movie)
+res = movies_collection.insert_one(
+    movie.model_dump(by_alias=False)
+)
+print(f"inserted id: {res.inserted_id}") # verifica o id gerado pelo banco
+print(movie.model_dump())
 print("="*40)
 
 # READ (find) 
