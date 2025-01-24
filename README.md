@@ -6,6 +6,84 @@
 07/02 - Apresentação favoritar artista
 </pre>
 
+# Favoritar filme
+
+## main.py
+
+```python
+# carrega credenciais de acesso ao cloud atlas:
+dotenv.load_dotenv(".env") 
+db_url = os.environ["MONGODB_URL"] 
+
+client = motor.motor_asyncio.AsyncIOMotorClient(db_url)
+# db => objeto representa a collection pycinedb
+db = client.pycine
+
+
+# SAVE Movie no banco de dados (collection: pycine.movies)
+@app.post("/save/",
+    response_model=models.Movie,
+    status_code=status.HTTP_201_CREATED,
+    response_model_by_alias=False,
+)
+async def save_movie(movie: models.Movie = Body(...)):
+    movies_collection = db.get_collection("movies")
+    movie.is_fav = True
+    # TODO: fazer validação para evitar multipla inserção do mesmo filme
+    new_movie = await movies_collection.insert_one(
+        movie.model_dump(by_alias=False, exclude=["id"])
+    )
+    created_movie = await movies_collection.find_one(
+        {"_id": new_movie.inserted_id}
+    )
+    return created_movie
+
+
+# DELETE Movie de pycine.movies
+@app.get("/remove/",
+    response_description="Remove movie by id",
+    status_code=status.HTTP_200_OK,
+    response_model_by_alias=False,
+)
+async def remove_movie(id: str):
+    movies_collection = db.get_collection("movies")
+    deleted_id = await movies_collection.delete_one({'_id': id})
+    return deleted_id
+
+```
+
+## models.py
+
+Adicionar o campo `is_fav`
+
+```python
+class Movie(BaseModel):
+    # atributos ...
+    is_fav: Optional[bool] = False
+
+```
+
+```js
+async function save(movie) {
+    const endpoint = `http://localhost:8000/save`;
+    const settings = {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(movie)
+    };
+    const res = await fetch(endpoint, settings);
+    const data = res.json();
+    if (res.ok) {
+        console.log(data);
+        savedMovie = data;
+        return data;
+    } else {throw new Error(data); }
+  }
+```
+
 
 ## Svelte rotas
 <pre>

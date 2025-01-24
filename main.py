@@ -75,7 +75,7 @@ def search_movies():
     return results
 
 
-# SAVE Movie no banco de dados (collection: pycinedb.movies)
+# SAVE Movie no banco de dados (collection: pycine.movies)
 @app.post("/save/",
     response_model=models.Movie,
     status_code=status.HTTP_201_CREATED,
@@ -84,6 +84,7 @@ def search_movies():
 async def save_movie(movie: models.Movie = Body(...)):
     movies_collection = db.get_collection("movies")
     movie.is_fav = True
+    # TODO: fazer validação para evitar dupla inserção do mesmo movie
     new_movie = await movies_collection.insert_one(
         movie.model_dump(by_alias=False, exclude=["id"])
     )
@@ -93,7 +94,7 @@ async def save_movie(movie: models.Movie = Body(...)):
     return created_movie
 
 
-# DELETE Movie de pycinedb.movies
+# DELETE Movie de pycine.movies
 @app.get("/remove/",
     response_description="Remove movie by id",
     status_code=status.HTTP_200_OK,
