@@ -6,37 +6,6 @@
 07/02 - Apresentação favoritar artista
 </pre>
 
-# Favoritar filme
-
-```js
-async function setFav(movieId) {
-    let endpoint = `http://localhost:8000/fav/movie/${movieId}`;
-    const settings = {
-        method: 'POST',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-        }
-    };
-    const res = await fetch(endpoint, settings);
-    const data = res.json();
-    if (res.ok) {
-        console.log(data);
-        return data;
-    } else {throw new Error(data); }
-}
-```
-
-```python
-
-@app.post("/fav/movie/{movie_id}")
-def save_movie(movie_id: int): 
-    print(f"request to save movie [{movie_id}]")
-    # save in cloud atlas ...
-    return {"movie_id": movie_id}
-
-```
-
 
 ## Svelte rotas
 <pre>

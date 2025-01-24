@@ -1,6 +1,6 @@
 import os
 import dotenv
-from fastapi import FastAPI
+from fastapi import FastAPI, status, Body
 from fastapi.middleware.cors import CORSMiddleware
 import motor.motor_asyncio
 import pycine.tmdb as tmdb
@@ -33,15 +33,18 @@ def hello():
 
 
 @app.get("/find/",
-    response_description="List all movies",
+    response_description="List all movies stored in atlas cloud",
     response_model=models.MovieCollection,
+    # response_model_by_alias=True,
     response_model_by_alias=False,
 )
 async def list_movies():
     movies_collection = db.get_collection("movies")
-    return models.MovieCollection(
+    result = models.MovieCollection(
         movies=await movies_collection.find().to_list(20)
     )
+    print(result)
+    return result
 
 
 @app.get("/movie/{id}")
@@ -70,3 +73,33 @@ def search_movies():
     """
     results = tmdb.search_movies()
     return results
+
+
+# SAVE Movie no banco de dados (collection: pycinedb.movies)
+@app.post("/save/",
+    response_model=models.Movie,
+    status_code=status.HTTP_201_CREATED,
+    response_model_by_alias=False,
+)
+async def save_movie(movie: models.Movie = Body(...)):
+    movies_collection = db.get_collection("movies")
+    movie.is_fav = True
+    new_movie = await movies_collection.insert_one(
+        movie.model_dump(by_alias=False, exclude=["id"])
+    )
+    created_movie = await movies_collection.find_one(
+        {"_id": new_movie.inserted_id}
+    )
+    return created_movie
+
+
+# DELETE Movie de pycinedb.movies
+@app.get("/remove/",
+    response_description="Remove movie by id",
+    status_code=status.HTTP_200_OK,
+    response_model_by_alias=False,
+)
+async def remove_movie(id: str):
+    movies_collection = db.get_collection("movies")
+    deleted_id = await movies_collection.delete_one({'_id': id})
+    return deleted_id
