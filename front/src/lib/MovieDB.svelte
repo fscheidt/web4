@@ -1,5 +1,6 @@
 <script>
 import { onMount } from 'svelte';
+import MovieItem from "$lib/MovieItem.svelte";
 let results = $state(null);
 let debug = $state(false);
 
@@ -35,13 +36,7 @@ onMount(() => {
     
     <div class="results">
         {#each results as movie }
-        {#if movie.poster_path }
-        <p><img src="https://image.tmdb.org/t/p/w185/{movie.poster_path}" alt="{movie.title}"></p>
-        {/if}
-        <div>
-            <h2>{movie.title }</h2>
-            <p>{movie.release_date}</p>
-        </div>
+            <MovieItem {movie}/>
         {/each}
     </div>
     {/if}
@@ -56,8 +51,10 @@ pre{
     white-space: pre-wrap;
 }
 .results{
-    display:grid;
+    display: flex;
     gap: 10px;
-    grid-template-columns: max-content max-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 </style>
