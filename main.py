@@ -86,11 +86,13 @@ async def save_movie(movie: models.Movie = Body(...)):
     movie.is_fav = True
     # TODO: fazer validação para evitar dupla inserção do mesmo movie
     new_movie = await movies_collection.insert_one(
+        # converte objeto movie em json
         movie.model_dump(by_alias=False, exclude=["id"])
     )
     created_movie = await movies_collection.find_one(
         {"_id": new_movie.inserted_id}
     )
+    # TODO: validar se created_movie existe
     return created_movie
 
 

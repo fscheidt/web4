@@ -1,5 +1,6 @@
 <script>
 import { onMount } from "svelte";
+// variavel passada como parametro
 let {movie} = $props();
 let savedMovie = $state(null);
 
