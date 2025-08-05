@@ -66,6 +66,8 @@ As informações de uma pessoa poderiam ser representadas no JSON abaixo:
 
 Agora podemos enviar os dados da pessoa para outro computador (cliente) pois JSON é uma linguagem universal.
 
+- Validação do json: https://jsonlint.com/
+- extensão chrome: [JSON Formatter](https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
 
 ### APIs
 
