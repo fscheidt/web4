@@ -74,8 +74,11 @@ Agora podemos enviar os dados da pessoa para outro computador (cliente) pois JSO
 Abrir a seguinte url no navegador: https://zenquotes.io/api/today
 
 
-### Material
+### Atividade
 
-- [Material](https://drive.google.com/drive/folders/1xsq_DNEq8DBFviDl0x2B5C89xBazAE-l?usp=sharing)
-- [Configuração ambiente dev](https://youtu.be/rqIrIfuyRmc)
+- [Atividade modelagem com json](https://drive.google.com/drive/folders/1xsq_DNEq8DBFviDl0x2B5C89xBazAE-l?usp=sharing)
+
+
+## Complementar
+- [(video) configuração ambiente python](https://youtu.be/rqIrIfuyRmc)
 
