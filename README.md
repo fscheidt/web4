@@ -8,6 +8,11 @@ Foco da disciplina é o estudo de aplicações que usam a **arquitetura** basead
 - Web IV: sistemas baseados na arquitetura de **Microserviços** 
 - Web II e III: sistemas de arquitetura *Monolíticas*
 
+### Atividade
+
+- [Atividade modelagem com json](https://drive.google.com/drive/folders/1xsq_DNEq8DBFviDl0x2B5C89xBazAE-l?usp=sharing)
+
+
 ### Serialização de dados com JSON
 
 JSON (Javascript Object Notation)
@@ -74,10 +79,12 @@ Agora podemos enviar os dados da pessoa para outro computador (cliente) pois JSO
 Abrir a seguinte url no navegador: https://zenquotes.io/api/today
 
 
-### Atividade
 
-- [Atividade modelagem com json](https://drive.google.com/drive/folders/1xsq_DNEq8DBFviDl0x2B5C89xBazAE-l?usp=sharing)
 
+<br>
+<br>
+
+---
 
 ## Complementar
 - [(video) configuração ambiente python](https://youtu.be/rqIrIfuyRmc)
