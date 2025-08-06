@@ -13,7 +13,7 @@ Foco da disciplina é o estudo de aplicações que usam a **arquitetura** basead
 - [Atividade modelagem com json](https://drive.google.com/drive/folders/1xsq_DNEq8DBFviDl0x2B5C89xBazAE-l?usp=sharing)
 
 
-### Serialização de dados com JSON
+### JSON
 
 JSON (Javascript Object Notation)
 
@@ -71,12 +71,16 @@ As informações de uma pessoa poderiam ser representadas no JSON abaixo:
 
 Agora podemos enviar os dados da pessoa para outro computador (cliente) pois JSON é uma linguagem universal.
 
+### Ferramentas
+
 - Validação do json: https://jsonlint.com/
 - extensão chrome: [JSON Formatter](https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
 
+
 ### APIs
 
-Abrir a seguinte url no navegador: https://zenquotes.io/api/today
+Abrir a seguinte url no navegador: 
+- https://zenquotes.io/api/today
 
 
 
