@@ -51,6 +51,21 @@ As informações de uma pessoa poderiam ser representadas no JSON abaixo:
 
 ```js
 
+
+
+{
+
+    "titulo": {
+        "en": "Silver linning...",
+        "ptbr": "O Lado bom",
+    },
+
+}
+
+
+
+
+
 {
     "id": 101,
     "nome": "Maria",
