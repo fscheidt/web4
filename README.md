@@ -1,7 +1,6 @@
 # Desenvolvimento Web IV
 
-## Aula 1 
-- 05/08/25
+## AULA 01 (05/08)
 
 Foco da disciplina é o estudo de aplicações que usam a **arquitetura** baseada em Microserviços.
 
