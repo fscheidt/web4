@@ -1,5 +1,19 @@
 # Desenvolvimento Web IV
 
+<details>
+<summary>INFO DA DISCIPLINA</summary>
+
+- **AVA**
+- Curso: TADS
+- Período: 4°
+- Horário: terça, 19:00 às 22:20 (Lab 2)
+- Período letivo: **2025/2**
+- Aulas: 05/08/25 à dez/25
+- **[Repositório](https://github.com/fscheidt/web4)**
+
+</details>
+
+
 ## AULA 01 (05/08)
 
 Foco da disciplina é o estudo de aplicações que usam a **arquitetura** baseada em Microserviços.
