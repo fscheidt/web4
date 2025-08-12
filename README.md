@@ -14,9 +14,11 @@
 </details>
 
 ## AULA 02 (12/08)
- 
 
-## AULA 01 (05/08)
+
+## AULA 01 (05/08) 
+
+Introdução à disciplina.
 
 Foco da disciplina é o estudo de aplicações que usam a **arquitetura** baseada em Microserviços.
 
