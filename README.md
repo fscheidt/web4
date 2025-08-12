@@ -3,7 +3,7 @@
 <details>
 <summary>INFO DA DISCIPLINA</summary>
 
-- **AVA**
+- **[AVA](https://ava.ifpr.edu.br/course/view.php?id=14063)**
 - Curso: TADS
 - Período: 4°
 - Horário: terça, 19:00 às 22:20 (Lab 2)
