@@ -15,6 +15,14 @@
 
 ## AULA 02 (12/08)
 
+- [SLIDES](https://docs.google.com/presentation/d/1j47Rb7TWkMqJV58LyFQV4ANkEiiXAwyGGJKNgvAB_8k/edit?usp=sharing)
+
+https://zenquotes.io/api/today
+- url:  https://zenquotes.io/api/today
+- domínio:  zenquotes.io
+- endpoint:  api
+- resource:  today
+
 
 ## AULA 01 (05/08) 
 
