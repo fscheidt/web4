@@ -15,14 +15,19 @@
 
 ## AULA 02 (12/08)
 
+### fastapi
+
+- [exemplos (fastapi)](https://github.com/fscheidt/fast)
 - SLIDES no AVA
 
-https://zenquotes.io/api/today
-- url:  https://zenquotes.io/api/today
-- domínio:  zenquotes.io
-- endpoint:  api
-- resource:  today
+### vocabulário
 
+```
+url:      https://zenquotes.io/api/today
+domínio:  zenquotes.io
+endpoint: api
+resource: today
+```
 
 ## AULA 01 (05/08) 
 
@@ -35,7 +40,7 @@ Foco da disciplina é o estudo de aplicações que usam a **arquitetura** basead
 
 ### Atividade
 
-- [Atividade modelagem com json (Ver no AVA)](https://ava.ifpr.edu.br/course/view.php?id=14063)
+- Atividade modelagem com json: [Ver no AVA](https://ava.ifpr.edu.br/course/view.php?id=14063)
 
 
 ### JSON
