@@ -15,7 +15,7 @@
 
 ## AULA 02 (12/08)
 
-- [SLIDES](https://docs.google.com/presentation/d/1j47Rb7TWkMqJV58LyFQV4ANkEiiXAwyGGJKNgvAB_8k/edit?usp=sharing)
+- SLIDES no AVA
 
 https://zenquotes.io/api/today
 - url:  https://zenquotes.io/api/today
@@ -35,7 +35,7 @@ Foco da disciplina é o estudo de aplicações que usam a **arquitetura** basead
 
 ### Atividade
 
-- [Atividade modelagem com json](https://drive.google.com/drive/folders/1xsq_DNEq8DBFviDl0x2B5C89xBazAE-l?usp=sharing)
+- [Atividade modelagem com json (Ver no AVA)](https://ava.ifpr.edu.br/course/view.php?id=14063)
 
 
 ### JSON
@@ -99,6 +99,7 @@ Agora podemos enviar os dados da pessoa para outro computador (cliente) pois JSO
 
 - Validação do json: https://jsonlint.com/
 - extensão chrome: [JSON Formatter](https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
+- thunder client
 
 
 ### APIs
