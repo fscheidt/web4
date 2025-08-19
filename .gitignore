@@ -8,3 +8,6 @@ pdfs/
 __pycache__/
 # pasta do ambiente virtual
 env
+
+# arquivo com credenciais
+.env
