@@ -13,6 +13,22 @@
 
 </details>
 
+
+## AULA 03 - Requisições para APIs
+- **requests:** biblioteca pythonb para fazer requisições HTTP
+- exemplo requisição para [api dog.ceo](dogs.py)
+
+
+Criar o ambiente virtual
+
+```bash
+python3 -m venv env
+source env/bin/activate
+
+pip install -r requirements.txt
+```
+
+
 ## AULA 02 (12/08)
 
 ### fastapi
