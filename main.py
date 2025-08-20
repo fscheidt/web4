@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 app = FastAPI()
 
+"""
+BACKEND (SERVIDOR)
+"""
+
 data = {
     55: "Brazil",
     20: "Egito",
@@ -33,9 +37,11 @@ def sortear():
 # http://localhost:8000/
 
 @app.get("/")
-def hello():
+def hello() -> dict:
     return { "mensagem": "Hello World" }
 
+
+# http://localhost:8000/now
 @app.get("/now")
 def datetime_now():
     from datetime import datetime
