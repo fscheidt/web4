@@ -14,9 +14,13 @@
 </details>
 
 
+## AULA 04
+- 26/09
+
 ## AULA 03 - Requisições para APIs
+- 19/08
 - **requests:** biblioteca pythonb para fazer requisições HTTP
-- exemplo requisição para [api dog.ceo](dogs.py)
+- exemplo de requisição para [api dog.ceo](aulas/aula3-requests/dogs.py)
 
 
 Criar o ambiente virtual
@@ -29,14 +33,13 @@ pip install -r requirements.txt
 ```
 
 
-## AULA 02 (12/08)
+## AULA 02 - Endpoints
 
-### fastapi
+- 12/08
+- exemplos de **endpoints:** [main.py](aulas/aula2-endpoints/main.py)
 
-- [exemplos (fastapi)](https://github.com/fscheidt/fast)
-- SLIDES no AVA
 
-### vocabulário
+### Partes da URL
 
 ```
 url:      https://zenquotes.io/api/today
@@ -45,7 +48,13 @@ endpoint: api
 resource: today
 ```
 
-## AULA 01 (05/08) 
+### fastapi
+
+- https://github.com/fscheidt/fast
+- SLIDES no AVA
+
+## AULA 01 - JSON
+- 05/08
 
 Introdução à disciplina.
 
@@ -56,7 +65,7 @@ Foco da disciplina é o estudo de aplicações que usam a **arquitetura** basead
 
 ### Atividade
 
-- Atividade modelagem com json: [Ver no AVA](https://ava.ifpr.edu.br/course/view.php?id=14063)
+- Modelagem de dados (JSON): [Ver no AVA](https://ava.ifpr.edu.br/course/view.php?id=14063)
 
 
 ### JSON
@@ -136,6 +145,6 @@ Abrir a seguinte url no navegador:
 
 ---
 
-## Complementar
-- [(video) configuração ambiente python](https://youtu.be/rqIrIfuyRmc)
+## Material complementar
+- [(video) Configuração Ambiente dev Python](https://youtu.be/rqIrIfuyRmc)
 

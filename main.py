@@ -5,53 +5,22 @@ app = FastAPI()
 BACKEND (SERVIDOR)
 """
 
-data = {
-    55: "Brazil",
-    20: "Egito",
-    54: "Argentina"
-}
-
-# /country/55
-@app.get("/country/{area}")
-def country_area(area: int):
-    if area in data:
-        return {
-            "area": area,
-            "name": data[area]
-        }
-
-@app.get("/users")
-def list_users():
-    import json
-    with open("users.json") as f:
-        return json.load(f)
-
-
-# /sortear/6/60
-@app.get("/sortear/{quant}/{max}")
-def sortear():
-    # TODO :)
-    pass
-
-# DEFINIR O ENDPOINT
-# http://localhost:8000/
-
 @app.get("/")
 def hello() -> dict:
-    return { "mensagem": "Hello World" }
+    return { "menssage": "Web IV backend" }
 
 
-# http://localhost:8000/now
 @app.get("/now")
 def datetime_now():
+    """
+    request this endpoint: 
+        http://localhost:8000/now
+    """
     from datetime import datetime
     return {
         "datahora": datetime.now(),
         "pais": "BR"
     }
 
-
+# comando para iniciar o servidor no terminal:
 # uvicorn main:app --reload
-
-
-

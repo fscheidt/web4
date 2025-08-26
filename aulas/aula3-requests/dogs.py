@@ -1,4 +1,5 @@
 import requests # pip install requests
+from rich import print  # pip install rich
 """
    ENDPOINT: /breeds/list/all
 """
