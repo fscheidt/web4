@@ -22,5 +22,5 @@ def datetime_now():
         "pais": "BR"
     }
 
-# comando para iniciar o servidor no terminal:
+# iniciar o servidor pelo terminal:
 # uvicorn main:app --reload

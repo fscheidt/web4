@@ -14,8 +14,35 @@
 </details>
 
 
-## AULA 04
-- 26/09
+## AULA 04 - pydantic
+- 26/08
+
+### dotenv
+
+### pydantic
+
+```python
+class MovieService:
+    @staticmethod
+    def find_by_id(id: int) -> dict:
+        """ Obtem um filme pelo id """
+        url = f"https://api.themoviedb.org/3/movie/{id}"
+        params = {
+            "language": "en-US",
+        }
+        data = get_json(url, params)
+        movie = data
+        return movie
+```
+
+```python
+@app.get("/movie/{id}")
+def get_movie_by_id(id: int):
+    from tmdb import MovieService
+    data = MovieService.find_by_id(id)
+    return data
+```
+
 
 ## AULA 03 - Requisições para APIs
 - 19/08
@@ -52,6 +79,23 @@ resource: today
 
 - https://github.com/fscheidt/fast
 - SLIDES no AVA
+
+Opções para iniciar o fastapi:
+
+1) linha de comando:
+
+```bash
+uvicorn main:app --reload
+```
+
+2) no arquivo main.py
+
+```python
+# main.py - adicionar no final
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", reload=True)
+```
 
 ## AULA 01 - JSON
 - 05/08
