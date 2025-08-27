@@ -11,5 +11,15 @@ if __name__ == "__main__":
         data = json.load(f)
 
     user = User.model_validate(data)
-    
     print(user)
+
+    # ------------------------------------
+    # lista de user
+    # ------------------------------------
+
+    path = Path(__file__).parent.parent / "data/users.json"
+    with open(path) as f:
+        data = json.load(f)
+
+    users = [User.model_validate(user) for user in data]
+    print(users)

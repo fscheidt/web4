@@ -4,6 +4,7 @@ load_dotenv(find_dotenv(".env"))
 TOKEN = os.environ["TMDB_TOKEN"]
 import requests
 from rich import print
+from models import Movie
 
 def get_json(url: str, params: dict = None) -> dict:
     headers = {
@@ -23,10 +24,12 @@ class MovieService:
             "page": page
         }
         data = get_json(url, params)
-        return data
+        results = data['results']
+        movies = [Movie.model_validate(m) for m in results ]
+        return movies
     
     @staticmethod
-    def get_movie(id: int):
+    def find_by_id(id: int):
         """ dados do filme pelo id """
         # 218 
         pass
