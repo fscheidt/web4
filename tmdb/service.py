@@ -3,7 +3,6 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv(".env"))
 TOKEN = os.environ["TMDB_TOKEN"]
 import requests
-from rich import print
 from models import Movie
 
 def get_json(url: str, params: dict = None) -> dict:
@@ -17,7 +16,11 @@ def get_json(url: str, params: dict = None) -> dict:
 
 class MovieService:
     @staticmethod
-    def get_top_rated(page:int = 1):
+    def get_top_rated(page:int = 1) -> list[Movie]:
+        """
+        Obtem a lista de filmes melhores rankeados
+            endpoint: /movie/top_rated
+        """
         url = "https://api.themoviedb.org/3/movie/top_rated"
         params = {
             "language": "en-US",
@@ -29,7 +32,15 @@ class MovieService:
         return movies
     
     @staticmethod
-    def find_by_id(id: int):
-        """ dados do filme pelo id """
-        # 218 
-        pass
+    def find_by_id(id: int) -> Movie:
+        """ 
+        Obtem os dados de um filme pelo id 
+            endpoint: /movie/{id}
+        """
+        url = f"https://api.themoviedb.org/3/movie/{id}"
+        params = {
+            "language": "en-US",
+        }
+        movie = get_json(url, params)
+        movie = Movie.model_validate(movie)
+        return movie

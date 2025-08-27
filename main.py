@@ -29,6 +29,13 @@ def get_top_ranked_movies():
     # movies = MovieService.get_top_rated(page=2)
     return movies
 
+@app.get("/movie/{id}")
+def get_movie(id: int):
+    from tmdb.service import MovieService
+    movie = MovieService.find_by_id(id)
+    return movie
+
+
 # Documentação dos endpoints:
 # localhost:8000/docs
 

@@ -9,12 +9,12 @@ class User(BaseModel):
 
 class Movie(BaseModel):
    id: int
+   genre_ids: list | None = None
    original_title: str
-   genre_ids: list
    overview: str
    popularity: float
    poster_path: str | None = None
-   title: str
    release_date: str
+   title: str
    vote_average: float
    vote_count: int
