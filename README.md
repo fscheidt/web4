@@ -23,24 +23,28 @@
 
 ```python
 class MovieService:
+    
     @staticmethod
-    def find_by_id(id: int) -> dict:
-        """ Obtem um filme pelo id """
+    def find_by_id(id: int) -> Movie:
+        """ 
+        Obtem os dados de um filme pelo id 
+            endpoint: /movie/{id}
+        """
         url = f"https://api.themoviedb.org/3/movie/{id}"
         params = {
             "language": "en-US",
         }
-        data = get_json(url, params)
-        movie = data
+        movie = get_json(url, params)
+        movie = Movie.model_validate(movie)
         return movie
 ```
 
 ```python
 @app.get("/movie/{id}")
-def get_movie_by_id(id: int):
-    from tmdb import MovieService
-    data = MovieService.find_by_id(id)
-    return data
+def get_movie(id: int):
+    from tmdb.service import MovieService
+    movie = MovieService.find_by_id(id)
+    return movie
 ```
 
 

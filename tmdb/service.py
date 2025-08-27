@@ -15,6 +15,21 @@ def get_json(url: str, params: dict = None) -> dict:
 
 
 class MovieService:
+    
+    @staticmethod
+    def find_by_id(id: int) -> Movie:
+        """ 
+        Obtem os dados de um filme pelo id 
+            endpoint: /movie/{id}
+        """
+        url = f"https://api.themoviedb.org/3/movie/{id}"
+        params = {
+            "language": "en-US",
+        }
+        movie = get_json(url, params)
+        movie = Movie.model_validate(movie)
+        return movie
+    
     @staticmethod
     def get_top_rated(page:int = 1) -> list[Movie]:
         """
@@ -30,17 +45,3 @@ class MovieService:
         results = data['results']
         movies = [Movie.model_validate(m) for m in results ]
         return movies
-    
-    @staticmethod
-    def find_by_id(id: int) -> Movie:
-        """ 
-        Obtem os dados de um filme pelo id 
-            endpoint: /movie/{id}
-        """
-        url = f"https://api.themoviedb.org/3/movie/{id}"
-        params = {
-            "language": "en-US",
-        }
-        movie = get_json(url, params)
-        movie = Movie.model_validate(movie)
-        return movie
