@@ -9,25 +9,14 @@ BACKEND (SERVIDOR)
 def hello() -> dict:
     return { "menssage": "Web IV backend" }
 
-@app.get("/now")
-def datetime_now():
-    """
-    request this endpoint: 
-        http://localhost:8000/now
-    """
-    from datetime import datetime
-    return {
-        "datahora": datetime.now(),
-        "pais": "BR"
-    }
-
 
 @app.get("/movies/top")
-def get_top_ranked_movies():
+@app.get("/movies/top/{page}")
+def get_top_ranked_movies(page: int = 1):
     from tmdb.service import MovieService
-    movies = MovieService.get_top_rated()
-    # movies = MovieService.get_top_rated(page=2)
+    movies = MovieService.get_top_rated(page)
     return movies
+
 
 @app.get("/movie/{id}")
 def get_movie(id: int):
