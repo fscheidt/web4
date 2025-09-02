@@ -12,7 +12,12 @@
 - **[Repositório](https://github.com/fscheidt/web4)**
 
 </details>
+    
+## AULA 05 - TMDB
+- 02/09
 
+endpoint: `https://api.themoviedb.org/3/movie/{id}`
+- [movie.json](/data/movie.json)
 
 ## AULA 04 - pydantic
 - 26/08
