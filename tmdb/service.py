@@ -3,7 +3,8 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv(".env"))
 TOKEN = os.environ["TMDB_TOKEN"]
 import requests
-from models import Movie
+from models import Movie, Genre
+import json
 
 def get_json(url: str, params: dict = None) -> dict:
     headers = {
@@ -15,7 +16,17 @@ def get_json(url: str, params: dict = None) -> dict:
 
 
 class MovieService:
+
+    @staticmethod
+    def get_genres() -> list[Genre]:
+        filepath = "data/genres.json"
+        with open(filepath) as f:
+            data = json.load(f)
+        data = data['genres']
+        genres = [Genre.model_validate(g) for g in data]
+        return genres
     
+
     @staticmethod
     def find_by_id(id: int) -> Movie:
         """ 
@@ -29,6 +40,7 @@ class MovieService:
         movie = get_json(url, params)
         movie = Movie.model_validate(movie)
         return movie
+    
     
     @staticmethod
     def get_top_rated(page:int = 1) -> list[Movie]:

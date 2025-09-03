@@ -25,6 +25,13 @@ def get_movie(id: int):
     return movie
 
 
+@app.get("/genres")
+def get_genres():
+    from tmdb.service import MovieService
+    genres = MovieService.get_genres()
+    return genres
+
+
 # Documentação dos endpoints:
 # localhost:8000/docs
 
