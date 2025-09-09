@@ -15,7 +15,7 @@
 
 ## AULA 06 - FRONT
 - 09/09
-- [SLIDES](https://docs.google.com/presentation/d/1d9bO0FdiFtp6inSJtT78i9O0t1QHhzWcw2zp5jUhleM/edit?usp=sharing)
+- Svelte
 
 ## AULA 05 - TMDB
 - 02/09
