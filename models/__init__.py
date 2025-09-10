@@ -22,6 +22,11 @@ class Movie(BaseModel):
    vote_average: float
    vote_count: int
 
+   @computed_field
+   @property
+   def poster_url(self) -> str:
+      return f"https://image.tmdb.org/t/p/w185{self.poster_path}"
+
 
 class Genre(BaseModel):
    id: int
