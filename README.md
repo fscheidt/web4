@@ -15,7 +15,7 @@
 
 ## AULA 06 - FRONT
 - 09/09
-- Svelte
+- [Svelte front-end](https://github.com/fscheidt/front)
 
 ## AULA 05 - TMDB
 - 02/09
