@@ -13,6 +13,10 @@
 
 </details>
 
+## AULA 07 - Componentes Svelte
+- 16/09
+- [Movies.svelte](https://github.com/fscheidt/front/blob/17993eca640ac6936cd8784a0fb5af8adb9ca5ae/src/lib/Movies.svelte) e MovieCard.svelte
+
 ## AULA 06 - FRONT
 - 09/09
 - [Svelte front-end](https://github.com/fscheidt/front)
