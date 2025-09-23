@@ -10,8 +10,8 @@ load_dotenv(find_dotenv(".env"))
 # carrega credenciais de acesso ao cloud atlas:
 db_url = os.environ["MONGODB_URL"] 
 client = motor.motor_asyncio.AsyncIOMotorClient(db_url)
-# db => objeto representa a collection pycine
-db = client.sample_mflix
+# db => objeto representa a base de dados:
+db = client.sample_mflix  # <= nome do database
 # -------------------------------------
 
 """
