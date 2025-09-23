@@ -13,6 +13,87 @@
 
 </details>
 
+## AULA 08 - Banco de dados
+
+### BACKEND (FASTAPI)
+
+Atlas cloud
+
+#### Dependências python
+
+```bash
+# ativar o env
+source env/bin/activate
+
+# driver do mongodb para python
+pip install pymongo
+
+# habilita acesso assincrono ao pymongo (para o fastapi)
+pip install motor
+```
+
+#### env
+
+```python
+# adicionar no arquivo .env
+MONGODB_URL="mongodb+srv://USERNAME:PASSWORD@cluster0.a00ka.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+```
+
+
+## main.py
+
+```python
+# carrega credenciais de acesso ao cloud atlas:
+dotenv.load_dotenv(".env") 
+db_url = os.environ["MONGODB_URL"] 
+
+client = motor.motor_asyncio.AsyncIOMotorClient(db_url)
+# db => objeto representa a collection pycinedb
+db = client.pycine
+
+
+# salva no banco de dados (collection: pycine.quotes)
+@app.post("/quotes/save",
+    # response_model=models.Quote,
+    # response_model_by_alias=False,
+    status_code=status.HTTP_201_CREATED,
+)
+async def save_quote(quote: models.Movie = Body(...)):
+    movies_collection = db.get_collection("quotes")
+    # TODO: validação: evitar multipla inserção do mesmo item
+    new_quote = await collection.insert_one(
+        # quote.model_dump()
+    )
+    created_quote = await collection.find_one(
+        {"_id": created_movie.inserted_id}
+    )
+    return created_movie
+
+```
+
+### FRONT (SVELTE)
+
+```js
+async function save(quote) {
+    const endpoint = `http://localhost:8000/quote/save`;
+    const options = {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(quote)
+    };
+    const res = await fetch(endpoint, options);
+    const data = res.json();
+    if (res.ok) {
+        console.log(data);
+        return data;
+    } else {throw new Error(data); }
+  }
+```
+
+
 ## AULA 07 - Componentes Svelte
 - 16/09
 - [Movies.svelte](https://github.com/fscheidt/front/blob/17993eca640ac6936cd8784a0fb5af8adb9ca5ae/src/lib/Movies.svelte) e MovieCard.svelte
