@@ -1,0 +1,2 @@
+TMDB_TOKEN = "hMo"
+MONGODB_URL="mongodb+srv://"

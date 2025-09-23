@@ -19,6 +19,19 @@
 
 Atlas cloud
 
+
+felippescheidt_db_user
+bFQIg55f0Bt9gXzN
+
+
+python -m pip install "pymongo[srv]"
+
+mongodb+srv://felippescheidt_db_user:bFQIg55f0Bt9gXzN@cluster0.ityxszs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
+
+
+
 #### Dependências python
 
 ```bash
@@ -50,6 +63,18 @@ db_url = os.environ["MONGODB_URL"]
 client = motor.motor_asyncio.AsyncIOMotorClient(db_url)
 # db => objeto representa a collection pycinedb
 db = client.pycine
+
+
+@app.get(
+   "/find/",
+    response_description="List all movies",
+    response_model=MovieCollection,
+    response_model_by_alias=False,
+)
+async def list_movies():
+    movies_collection = db.get_collection("movies")
+    return MovieCollection(movies=await movies_collection.find().to_list(20))
+
 
 
 # salva no banco de dados (collection: pycine.quotes)
