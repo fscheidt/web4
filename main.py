@@ -36,14 +36,24 @@ def hello() -> dict:
     return { "menssage": "Web IV backend" }
 
 
-@app.get("/users/find/")
-async def list_users():
-    """ banco de dados: sample_mflix """
+@app.get("/mflix/users/find")
+async def mflix_list_users():
+    """ base de dados: sample_mflix | collection: users """
     collection = db.get_collection("users")
     results = await collection.find().to_list(20)
     results = [user['name'] for user in results]
     return results
 
+
+@app.get("/mflix/movies/find")
+async def mflix_find_movies(max_rows: int=5):
+    """ base de dados: sample_mflix | colection: movies """
+    collection = db.get_collection("movies")
+    # Seleciona apenas os campos: title e year
+    results = await collection.find({}, {"title": 1, "year": 1, "_id": 0}).to_list(max_rows)
+    # Seleciona todos os campos (exceto _id)
+    # results = await collection.find({}, {"_id": 0}).to_list(max_rows)
+    return results
 
 @app.get("/movies/top")
 @app.get("/movies/top/{page}")
@@ -66,9 +76,12 @@ def get_genres():
     genres = MovieService.get_genres()
     return genres
 
-
+# ---------------------------
 # Documentação dos endpoints:
+# ---------------------------
 # localhost:8000/docs
 
+# ---------------------------------
 # iniciar o servidor pelo terminal:
+# ---------------------------------
 # uvicorn main:app --reload

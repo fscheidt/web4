@@ -61,7 +61,7 @@ dotenv.load_dotenv(".env")
 db_url = os.environ["MONGODB_URL"] 
 
 client = motor.motor_asyncio.AsyncIOMotorClient(db_url)
-# db => objeto representa a collection pycinedb
+# db => objeto representa a base de dados pycine
 db = client.pycine
 
 

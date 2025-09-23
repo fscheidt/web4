@@ -1,2 +1,3 @@
-TMDB_TOKEN = "hMo"
+# renomear arquivo para .env
+TMDB_TOKEN="hMo"
 MONGODB_URL="mongodb+srv://"
