@@ -1,0 +1,82 @@
+{
+    "_id": {
+        "$oid": "573a1390f29313caabcd50e5"
+    },
+    "plot": "The cartoonist, Winsor McCay, brings the Dinosaurus back to life in the figure of his latest creation, Gertie the Dinosaur.",
+    "genres": [
+        "Animation",
+        "Short",
+        "Comedy"
+    ],
+    "runtime": {
+        "$numberInt": "12"
+    },
+    "cast": [
+        "Winsor McCay",
+        "George McManus",
+        "Roy L. McCardell"
+    ],
+    "num_mflix_comments": {
+        "$numberInt": "0"
+    },
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTQxNzI4ODQ3NF5BMl5BanBnXkFtZTgwNzY5NzMwMjE@._V1_SY1000_SX677_AL_.jpg",
+    "title": "Gertie the Dinosaur",
+    "fullplot": "Winsor Z. McCay bets another cartoonist that he can animate a dinosaur. So he draws a big friendly herbivore called Gertie. Then he get into his own picture. Gertie walks through the picture, eats a tree, meets her creator, and takes him carefully on her back for a ride.",
+    "languages": [
+        "English"
+    ],
+    "released": {
+        "$date": {
+            "$numberLong": "-1745020800000"
+        }
+    },
+    "directors": [
+        "Winsor McCay"
+    ],
+    "writers": [
+        "Winsor McCay"
+    ],
+    "awards": {
+        "wins": {
+            "$numberInt": "1"
+        },
+        "nominations": {
+            "$numberInt": "0"
+        },
+        "text": "1 win."
+    },
+    "lastupdated": "2015-08-18 01:03:15.313000000",
+    "year": {
+        "$numberInt": "1914"
+    },
+    "imdb": {
+        "rating": {
+            "$numberDouble": "7.3"
+        },
+        "votes": {
+            "$numberInt": "1837"
+        },
+        "id": {
+            "$numberInt": "4008"
+        }
+    },
+    "countries": [
+        "USA"
+    ],
+    "type": "movie",
+    "tomatoes": {
+        "viewer": {
+            "rating": {
+                "$numberDouble": "3.7"
+            },
+            "numReviews": {
+                "$numberInt": "29"
+            }
+        },
+        "lastUpdated": {
+            "$date": {
+                "$numberLong": "1439234403000"
+            }
+        }
+    }
+}
