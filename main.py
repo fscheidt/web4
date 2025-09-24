@@ -66,8 +66,11 @@ async def save_user(user: dict = Body(...)):
     collection = db.get_collection("users")
     # INSERT INTO users values...
     created_user = await collection.insert_one(user)
-    print("result %s" % repr(created_user.inserted_id))
-    return {"user_id": f"{created_user.inserted_id}" }
+    print("result %s" % repr(created_user.inserted_id)) # printa o id gerado
+    # faz uma consulta para obter o usuario adicionado
+    user_added = await collection.find_one({"_id": created_user.inserted_id}, {"_id": 0})
+    return user_added  # <= retorna o novo usuario 
+
 
 @app.get("/movies/top")
 @app.get("/movies/top/{page}")
