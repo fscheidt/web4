@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status, Body  # <=
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 # -------------------------------------
@@ -50,10 +50,24 @@ async def mflix_find_movies(max_rows: int=5):
     """ base de dados: sample_mflix | colection: movies """
     collection = db.get_collection("movies")
     # Seleciona apenas os campos: title e year
-    results = await collection.find({}, {"title": 1, "year": 1, "_id": 0}).to_list(max_rows)
-    # Seleciona todos os campos (exceto _id)
-    # results = await collection.find({}, {"_id": 0}).to_list(max_rows)
+    # results = await collection.find({}, {"title": 1, "year": 1, "_id": 0}).to_list(max_rows)
+    # Todos os campos (exceto _id)
+    # SELECT * from movies LIMIT 5
+    results = await collection.find({}, {"_id": 0}).to_list(max_rows)
+    # TODO: "$gt"
+    # SELECT * from movies LIMIT 5 WHERE year > 1910
     return results
+
+@app.post("/mflix/users/save",
+    status_code=status.HTTP_201_CREATED,
+)
+async def save_user(user: dict = Body(...)):
+    """ adiciona um novo usuario na collection users """
+    collection = db.get_collection("users")
+    # INSERT INTO users values...
+    created_user = await collection.insert_one(user)
+    print("result %s" % repr(created_user.inserted_id))
+    return {"user_id": f"{created_user.inserted_id}" }
 
 @app.get("/movies/top")
 @app.get("/movies/top/{page}")
