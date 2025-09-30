@@ -19,19 +19,6 @@
 
 Atlas cloud
 
-
-felippescheidt_db_user
-bFQIg55f0Bt9gXzN
-
-
-python -m pip install "pymongo[srv]"
-
-mongodb+srv://felippescheidt_db_user:bFQIg55f0Bt9gXzN@cluster0.ityxszs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-
-
-
-
 #### Dependências python
 
 ```bash
